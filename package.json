@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.11.0"
+    "astro": "^5.11.0",
+    "axios": "^1.10.0",
+    "nanostores": "^1.0.1",
+    "react": "^19.1.0"
   }
 }

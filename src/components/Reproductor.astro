@@ -1,0 +1,62 @@
+---
+import {Icon} from "astro-icon/components"
+
+---
+<div class="reproductor">
+    <div>
+        <video id="myVideo" src="" ></video>
+    </div>
+
+    <div class="botones">
+        <button><Icon name="streamline:arrow-reload-horizontal-1-solid" width="32" height="32"/></button>
+        <button><Icon name="streamline:button-previous-solid" width="32" height="32"/></button>
+        <button class="play" id="botonplay" onclick="document.getElementById('myVideo').play()"><Icon name="streamline:button-play-solid" width="32" height="32"/></button>
+        <button class="pause" id="botonpause" onclick="document.getElementById('myVideo').pause()"><Icon name="streamline:button-pause-2-solid" width="32" height="32"/></button>
+        <button><Icon name="streamline:button-next-solid" width="32" height="32"/></button>
+        <button><Icon name="streamline:volume-level-high-solid" width="32" height="32"/></button>
+    </div>
+</div>
+
+<style>
+    video {
+		height: 65vh;
+		object-fit: cover;
+	}
+    .reproductor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #17191d;
+    }
+    .botones{
+       display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 80vw;
+        height: 15vh;
+    }
+
+    button {
+        background-color: transparent;
+        color: rgb(230, 154, 54);
+        transition: all 0.3s ease;
+    }
+    #botonplay {
+        background-color: transparent;
+        color: rgb(230, 154, 54);
+    }
+    #botonpause {
+        background-color: transparent;
+        color: rgb(230, 154, 54);
+        
+    }
+
+    /* button:hover {
+        opacity: 0.6;
+        transform: scale(1.1);
+    } */
+   
+</style>
+
+

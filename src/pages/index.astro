@@ -1,5 +1,7 @@
 ---
-import Prueba from '../components/prueba.astro';
+import Playlist from '../components/Playlist.astro';
+import Reproductor from '../components/Reproductor.astro';
+import Prueba from '../components/Prueba.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -8,5 +10,21 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Prueba/>
+	<div>
+		<Playlist/>
+
+		
+		<Reproductor/>
+		
+	</div>
 </Layout>
+
+<style>
+	div{
+		display: flex;
+	}
+	video {
+		height: 600px;
+		object-fit: cover;
+	}
+</style>

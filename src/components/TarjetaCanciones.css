@@ -1,0 +1,31 @@
+.Tarjeta {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+.Cancion {
+    display: flex;
+    gap: 8px;
+}
+h1 {
+    font-size: 1em;
+    font-weight: 500;
+}
+p {
+    font-size: 0.8em;
+    color: gray;
+}
+img {
+    width: 64px;
+    height: 64px;
+    border-radius: 60px;
+}
+button {
+    font-size: 1em;
+    font-weight: 600;
+    background-color: blue;
+    color: white;
+    border: transparent 2px;
+    border-radius: 30px;
+    padding: 16px;
+}

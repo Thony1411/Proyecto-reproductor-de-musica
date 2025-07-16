@@ -4,24 +4,38 @@ import Reproductor from '../components/Reproductor.astro';
 import Prueba from '../components/Prueba.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import TarjetaCanciones from '../components/TarjetaCanciones';
+import axios from 'axios';
+import type {Songs} from '../types/song.ts'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const listaCanciones = await axios.get('https://api.institutoalfa.org/api/songs')
 ---
 
 <Layout>
 	<div>
-		<Playlist/>
+		{
+			listaCanciones.data.songs.map(function(Canciones: Songs) {
+				return (
+					<TarjetaCanciones song={Canciones} client:visible/>
+				)	
+			})
+		}
+
+		<!-- <TarjetaCanciones title='Besos ricos' artist='Rawayana' client:visible/>
+		<TarjetaCanciones title='Bahia' artist='Rawayana' client:visible/> -->
+		<!-- <Playlist/> -->
 
 		
-		<Reproductor/>
-		
+		<!-- <Reproductor/> -->
 	</div>
 </Layout>
 
 <style>
 	div{
 		display: flex;
+		flex-direction: column;
 	}
 	video {
 		height: 600px;

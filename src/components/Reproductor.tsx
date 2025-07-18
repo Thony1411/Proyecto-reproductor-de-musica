@@ -11,16 +11,25 @@ export default function () {
 
     const [song, setSong] = React.useState<null | Songs>(null)
 
+    const refAudio = React.useRef<null | HTMLAudioElement> (null)
+
+
     React.useEffect(function () {
         $currentSong.subscribe(function (state) {
-
             setSong(state)
-
         })
-
     }, [])
     
-
+    function handlerPlay () {
+        if (refAudio.current) {
+            if (refAudio.current.paused){
+                refAudio.current.play()
+            } else {
+                refAudio.current.pause()
+            }
+            
+        }
+    }
     return (
         <div className="reproductor">
             <div className="contenedor1">
@@ -32,12 +41,12 @@ export default function () {
                     <p className="autor">{song?.author}</p>
                 </div>
             </div>
-            <audio src={song?.audio.url} controls autoPlay></audio>
+            <audio src={song?.audio.url} controls autoPlay ref={refAudio}></audio>
             <div className="contenedor2">
                 <input type="range" className="barra" />
                 <div className="botones">
                     <button className="botob"><BiSkipPrevious /></button>
-                    <button className="play"><HiPlayPause /></button>
+                    <button className="play" onClick={handlerPlay} ><HiPlayPause /></button>
                     <button className="botob"><BiSkipNext /></button>
                     <div className="volumen">
                         <div className="iconvolumen">

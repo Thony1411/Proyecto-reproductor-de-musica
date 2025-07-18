@@ -1,0 +1,107 @@
+    .image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    h1.titulo {
+        font-size: 1.8em;
+        font-weight: 500;
+        color: white
+    }
+
+    p.autor {
+        font-size: 1.2em;
+        color: rgb(172, 172, 172);
+    }
+
+    .reproductor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .contenedor1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    div.barra {
+        width: 320px;
+    }
+
+    input.barra {
+        width: 100%;
+    }
+
+    div.botones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    button.play {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+    }
+
+    div.volumen {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .iconvolumen {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 32px;
+    }
+
+    input.volumen {
+        display: none;
+        height: 100px;
+        position: absolute;
+        left: 60px;
+    }
+
+    button.botob {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 56px;
+    }
+
+
+    .botones button:hover {
+        opacity: 0.6;
+    }
+
+    .botones button:active {
+        transform: scale(0.9);
+    }
+
+    div.volumen:hover {
+        opacity: 0.6;
+    }
+
+    div.volumen:hover>input.volumen {
+        display: block;
+    }

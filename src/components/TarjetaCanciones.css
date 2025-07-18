@@ -1,7 +1,10 @@
 .Tarjeta {
     display: flex;
-    gap: 8px;
+    align-items: center;
     justify-content: space-between;
+    gap: 8px;
+    border: groove 2px rgb(61, 61, 61);
+    padding: 6px;
 }
 .Cancion {
     display: flex;
@@ -10,10 +13,11 @@
 h1 {
     font-size: 1em;
     font-weight: 500;
+    color: white;
 }
 p {
     font-size: 0.8em;
-    color: gray;
+    color: rgb(172, 172, 172);
 }
 img {
     width: 64px;
@@ -28,4 +32,13 @@ button {
     border: transparent 2px;
     border-radius: 30px;
     padding: 16px;
+    transition: all 0.3s ease;
 }
+
+    .botonplay:hover {
+        opacity: 0.6;
+    }
+
+    .botonplay:active {
+        transform: scale(0.9);
+    }

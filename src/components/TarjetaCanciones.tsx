@@ -9,7 +9,7 @@ interface Props {
 
 export default function ({ song }: Props) {
 
-    function handlerClick () {
+    function handlerClick() {
 
         $currentSong.set(song)
     }
@@ -17,20 +17,20 @@ export default function ({ song }: Props) {
     return (
         <div className='Tarjeta'>
             <div className='Cancion'>
-            <img src={song.image.url} alt="" />
+                <img src={song.image.url} alt="" />
+                <div>
+                    <h1>{song.title}</h1>
+                    <p>{song.author}</p>
+                </div>
+            </div>
             <div>
-                <h1>{ song.title}</h1>
-                <p>{ song.author}</p>
+                <button className='botonplay'
+                    onClick={handlerClick}
+                >
+                    Play</button>
             </div>
-            </div>
-            <div>
-            <button 
-            onClick={handlerClick}
-            >
-                Play</button>
-            </div>
-            
+
         </div>
-        
+
     )
 }

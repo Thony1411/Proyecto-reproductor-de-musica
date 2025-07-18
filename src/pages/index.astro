@@ -23,7 +23,7 @@ const listaCanciones = await axios.get('https://api.institutoalfa.org/api/songs'
 			}
 		</div>
 		<div class="reproductor">
-			<Reproductor/>
+			<Reproductor client:visible/>
 		</div>
 	</div>
 </Layout>
@@ -33,7 +33,7 @@ const listaCanciones = await axios.get('https://api.institutoalfa.org/api/songs'
         color: white;
         font-size: 1.5em;
         font-weight: 500;
-		padding-left: 12px;
+		padding: 12px 6px;
     }
 	div.main {
 		display: flex;

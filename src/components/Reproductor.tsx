@@ -4,21 +4,35 @@ import { BiSkipPrevious } from 'react-icons/bi';
 import { BiSkipNext } from 'react-icons/bi';
 import { RiVolumeUpFill } from "react-icons/ri";
 import './Reproductor.css'
+import { $currentSong } from "../store";
+import type { Songs } from "../types/song";
 
 export default function () {
 
+    const [song, setSong] = React.useState<null | Songs>(null)
+
+    React.useEffect(function () {
+        $currentSong.subscribe(function (state) {
+
+            setSong(state)
+
+        })
+
+    }, [])
+    
 
     return (
         <div className="reproductor">
             <div className="contenedor1">
                 <div>
-                    <img className="image" src="" alt="" />
+                    <img className="image" src={song?.image.url} alt="" />
                 </div>
                 <div>
-                    <h1 className="titulo"></h1>
-                    <p className="autor"></p>
+                    <h1 className="titulo">{song?.title}</h1>
+                    <p className="autor">{song?.author}</p>
                 </div>
             </div>
+            <audio src={song?.audio.url} controls autoPlay></audio>
             <div className="contenedor2">
                 <input type="range" className="barra" />
                 <div className="botones">

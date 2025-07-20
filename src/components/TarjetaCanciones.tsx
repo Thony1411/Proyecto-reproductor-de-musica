@@ -10,8 +10,8 @@ interface Props {
 export default function ({ song }: Props) {
 
     function handlerClick() {
-
         $currentSong.set(song)
+        
     }
 
     return (

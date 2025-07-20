@@ -1,7 +1,7 @@
 .Tarjeta {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: stretch;
     gap: 8px;
     border: groove 2px rgb(61, 61, 61);
     padding: 6px;
@@ -9,6 +9,7 @@
 .Cancion {
     display: flex;
     gap: 8px;
+    flex-grow: 1;
 }
 h1 {
     font-size: 1em;

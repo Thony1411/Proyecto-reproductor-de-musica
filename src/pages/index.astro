@@ -36,12 +36,22 @@ const listaCanciones = await axios.get('https://api.institutoalfa.org/api/songs'
 	div.main {
 		display: flex;
 		align-items: center;	
+		
+	}
+	@media (max-width: 720px) {
+		div.main {
+			display: flex;
+			flex-direction: column-reverse; 
+			align-items: stretch;
+			justify-content: stretch;
+			padding-top: 32px;
+		}
 	}
 	div.listaCanciones{
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		flex-basis: 500px;
+		flex-basis: 600px;
 		height: 90vh;
         background-color: #1b1e21;
         border-right:solid 2px #1f2227;

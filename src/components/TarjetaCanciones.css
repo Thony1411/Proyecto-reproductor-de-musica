@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: stretch;
     gap: 8px;
-    border: groove 2px rgb(61, 61, 61);
+    border: groove 4px rgb(61, 61, 61);
     padding: 6px;
 }
 .Cancion {
